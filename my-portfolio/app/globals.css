@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+.background-image {
+  background-image: url("./Assets/Images/mainBackground.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.neon-text {
+  text-shadow: 0 0 5px #38b2ac, 0 0 10px #38b2ac, 0 0 20px #38b2ac;
+}
+
+.font-fredoka {
+  font-family: var(--font-fredoka), sans-serif;
+}
