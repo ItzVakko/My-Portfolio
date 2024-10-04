@@ -14,10 +14,19 @@
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background container for the image */
 .background-image {
   background-image: url("./Assets/Images/mainBackground.jpg");
   background-size: cover;
   background-position: center;
+  z-index: -1;
+  transition: transform 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .neon-text {
@@ -26,4 +35,18 @@
 
 .font-fredoka {
   font-family: var(--font-fredoka), sans-serif;
+}
+
+@keyframes upDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-up-down {
+  animation: upDown 3s ease-in-out infinite;
 }

@@ -1,9 +1,17 @@
+import React from "react";
 import WelcomeText from "./Components/Header/WelcomeText";
+import BackgroundImage from "./Components/BackgroundImage";
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen background-image fixed">
+    <>
+      <BackgroundImage />
+
       <WelcomeText />
-    </div>
+
+      <WelcomeText />
+      <WelcomeText />
+      <WelcomeText />
+    </>
   );
 }
