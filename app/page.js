@@ -1,17 +1,18 @@
 import React from "react";
 import WelcomeText from "./Components/Header/WelcomeText";
 import BackgroundImage from "./Components/BackgroundImage";
+import SmoothEffectScroll from "./Components/SmoothEffectScroll";
 
 export default function Home() {
   return (
     <>
       <BackgroundImage />
 
-      <WelcomeText />
+      <SmoothEffectScroll>
+        <WelcomeText />
+      </SmoothEffectScroll>
 
-      <WelcomeText />
-      <WelcomeText />
-      <WelcomeText />
+      <div className="height"></div>
     </>
   );
 }
