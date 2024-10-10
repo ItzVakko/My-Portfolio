@@ -22,7 +22,6 @@ const NavBar = () => {
       <div className="w-full h-full flex justify-between items-center">
         <div></div>
 
-        {/* Outer div handles the positioning */}
         <div className="w-28 h-28 transform -translate-y-10">
           <motion.div
             animate={{ rotate: rotateAngle }}
