@@ -7,48 +7,37 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const NavBar = () => {
-  const scrollY = UseScrollPosition(); // Get the scroll position from the custom hook
-  const [rotateAngle, setRotateAngle] = useState(0); // State to keep track of the rotation angle
+  const scrollY = UseScrollPosition();
+  const [rotateAngle, setRotateAngle] = useState(0);
+  const [prevScrollY, setPrevScrollY] = useState(0);
 
   useEffect(() => {
-    // Update the rotation angle based on the scroll position
-    setRotateAngle((prevAngle) => {
-      // Determine the new angle based on scroll direction
-      // If scrolling down, increase the angle; if scrolling up, decrease it
-      return prevAngle + (scrollY > 0 ? 0.5 : -0.5); // Adjust multiplier for speed
-    });
-  }, [scrollY]); // Update on scroll position change
+    const scrollDiff = scrollY - prevScrollY;
+    setRotateAngle((prevAngle) => prevAngle + scrollDiff * 0.07);
+    setPrevScrollY(scrollY);
+  }, [scrollY, prevScrollY]);
 
   return (
     <div className="w-full h-20 bg-customGray fixed top-0 left-0 z-50 border-b border-white border-solid">
       <div className="w-full h-full flex justify-between items-center">
-        {/* Left Circle - Spins counter-clockwise on scroll down */}
-        <motion.div
-          animate={{ rotate: rotateAngle }} // Use the state variable for rotation
-          transition={{ type: "tween", duration: 0.5 }} // Smooth transition
-          className="w-28 h-28 transform -translate-x-1/3 -translate-y-1/3" // Keep your transform styles
-        >
-          <Image
-            src={progressCircleImage}
-            alt="ProgressCircle"
-            className="w-28 h-28"
-          />
-        </motion.div>
-
         <div></div>
 
-        {/* Right Circle - Spins clockwise on scroll down */}
-        <motion.div
-          animate={{ rotate: -rotateAngle }} // Rotate in the opposite direction
-          transition={{ type: "tween", duration: 0.5 }} // Smooth transition
-          className="w-28 h-28 transform translate-x-1/3 -translate-y-1/3" // Keep your transform styles
-        >
-          <Image
-            src={progressCircleImage}
-            alt="ProgressCircle"
-            className="w-28 h-28"
-          />
-        </motion.div>
+        {/* Outer div handles the positioning */}
+        <div className="w-28 h-28 transform -translate-y-10">
+          <motion.div
+            animate={{ rotate: rotateAngle }}
+            transition={{ type: "tween", duration: 0.5 }}
+            className="w-full h-full origin-center"
+          >
+            <Image
+              src={progressCircleImage}
+              alt="ProgressCircle"
+              className="w-full h-full"
+            />
+          </motion.div>
+        </div>
+
+        <div></div>
       </div>
     </div>
   );
