@@ -37,6 +37,10 @@
   font-family: var(--font-fredoka), sans-serif;
 }
 
+.font-teko {
+  font-family: var(--font-teko), sans-serif;
+}
+
 @keyframes upDown {
   0%,
   100% {
@@ -49,4 +53,24 @@
 
 .animate-up-down {
   animation: upDown 3s ease-in-out infinite;
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background-color: white;
+  box-shadow: 0 0 5px #38b2ac, 0 0 10px #38b2ac, 0 0 20px #38b2ac;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
