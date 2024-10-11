@@ -3,6 +3,7 @@ import WelcomeText from "./Components/Header/WelcomeText";
 import BackgroundImage from "./Components/BackgroundImage";
 import SmoothEffectScroll from "./Components/SmoothEffectScroll";
 import NavBar from "./Components/Header/NavBar";
+import HeaderContent from "./Components/Header/HeaderContent";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <SmoothEffectScroll>
         <WelcomeText />
       </SmoothEffectScroll>
+
+      <HeaderContent />
 
       <div className="h-[900px]"></div>
     </>
