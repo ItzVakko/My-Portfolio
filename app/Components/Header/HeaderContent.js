@@ -1,57 +1,91 @@
-"use client"; // Ensure this component runs on the client side
-
 import Image from "next/image";
-import React, { useState } from "react";
 import MyPhoto from "../../Assets/Images/myself.png";
-import { motion } from "framer-motion";
 
 const HeaderContent = () => {
-  const [hovered, setHovered] = useState(false); // Track hover state
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 }); // Store cursor position
-
-  const handleMouseEnter = (e) => {
-    setHovered(true); // Set hover to true on mouse enter
-    setCursorPosition({ x: e.clientX, y: e.clientY }); // Update cursor position
-  };
-
-  const handleMouseMove = (e) => {
-    setCursorPosition({ x: e.clientX, y: e.clientY }); // Update cursor position on mouse move
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(false); // Set hover to false on mouse leave
-  };
-
   return (
     <div className="relative flex justify-center">
-      {/* Lightening effect */}
-      {hovered && (
-        <motion.div
-          className="absolute rounded-full bg-white opacity-70 pointer-events-none"
-          style={{
-            width: 150, // Adjust width for the radius effect
-            height: 150, // Adjust height for the radius effect
-            left: cursorPosition.x - 75, // Center the overlay over the cursor
-            top: cursorPosition.y - 75, // Center the overlay over the cursor
-          }}
-          initial={{ scale: 0 }} // Initial scale for animation
-          animate={{ scale: 1 }} // Scale to full size on hover
-          exit={{ scale: 0 }} // Scale down on mouse leave
-          transition={{ duration: 0.3 }} // Animation duration
-        />
-      )}
-
-      <div
-        className="w-[330px] px-2 pt-2 bg-customGray border border-customWhite border-solid rounded-[5px] shadow-[0_4px_10px_rgba(255,255,255,0.2)]"
-        onMouseEnter={handleMouseEnter} // Mouse enter event
-        onMouseMove={handleMouseMove} // Mouse move event
-        onMouseLeave={handleMouseLeave} // Mouse leave event
-      >
+      <div className="w-[330px] px-2 pt-2 bg-customGray border border-customWhite border-solid rounded-[5px] shadow-[0_4px_10px_rgba(255,255,255,0.2)]">
         <Image
           src={MyPhoto}
           alt="My Photo"
           className="w-[330px] h-auto opacity-70 contrast-125 saturate-150"
         />
+
+        <div className="w-32 h-346 bg-[#2E2E2E] absolute top-10 translate-x-[-75px] border-2 border-lightGray pl-2 pt-1 pb-2">
+          <ol className="list-none">
+            <li className="text-gray-400">
+              1{" "}
+              <span>
+                &lt;<span className="text-red-400">body</span>&gt;
+              </span>
+            </li>
+            <li className="text-gray-400">
+              2{" "}
+              <span className="ml-4">
+                &lt;<span className="text-red-400">div</span>&gt;
+              </span>
+            </li>
+            <li className="text-gray-400">
+              3{" "}
+              <span className="ml-8">
+                &lt;<span className="text-yellow-200">Img</span> /&gt;
+              </span>
+            </li>
+            <li className="text-gray-400">
+              4{" "}
+              <span className="ml-4">
+                &lt;/<span className="text-red-400">div</span>&gt;
+              </span>
+            </li>
+            <li className="text-gray-400">
+              5{" "}
+              <span>
+                &lt;/<span className="text-red-400">body</span>&gt;
+              </span>
+            </li>
+          </ol>
+        </div>
+
+        <div className="w-44 h-50 bg-[#2E2E2E] absolute top-60 translate-x-[275px] border-2 border-lightGray pl-2 pt-1 pb-2">
+          <ol className="list-none">
+            <li className="text-gray-400">
+              1 <span className="text-cssOrange">.my-info &#123;</span>
+            </li>
+            <li className="text-gray-400">
+              2{" "}
+              <span className="ml-4 text-cssPurple">
+                name: <span className="text-cssRed">vako</span>
+              </span>
+            </li>
+            <li className="text-gray-400">
+              3{" "}
+              <span className="ml-4 text-cssPurple">
+                age: <span className="text-cssOrange">17</span>
+              </span>
+            </li>
+            <li className="text-gray-400">
+              4{" "}
+              <span className="ml-4 text-cssPurple">
+                experience: <span className="text-cssOrange">2y</span>
+              </span>
+            </li>
+            <li className="text-gray-400">
+              5{" "}
+              <span className="ml-4 text-cssPurple">
+                country: <span className="text-cssRed">georgia</span>
+              </span>
+            </li>
+            <li className="text-gray-400">
+              6{" "}
+              <span className="ml-4 text-cssPurple">
+                gender: <span className="text-cssRed">male</span>
+              </span>
+            </li>
+            <li className="text-gray-400">
+              7 <span className="text-cssOrange">&#125;</span>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   );
