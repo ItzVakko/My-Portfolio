@@ -16,7 +16,9 @@ export default function Home() {
         <WelcomeText />
       </SmoothEffectScroll>
 
-      <HeaderContent />
+      <SmoothEffectScroll>
+        <HeaderContent />
+      </SmoothEffectScroll>
 
       <div className="h-[900px]"></div>
     </>
