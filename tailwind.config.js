@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
       colors: {
         customGray: "rgba(21, 21, 21, 0.7)",
         customWhite: "rgba(255, 255, 255, 0.2)",

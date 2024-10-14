@@ -1,24 +1,16 @@
 import React from "react";
-import WelcomeText from "./Components/Header/WelcomeText";
 import BackgroundImage from "./Components/BackgroundImage";
-import SmoothEffectScroll from "./Components/SmoothEffectScroll";
-import NavBar from "./Components/Header/NavBar";
-import HeaderContent from "./Components/Header/HeaderContent";
+import HeaderWrapper from "./Components/Header/HeaderWrapper";
+import SkillsSection from "./Components/Main/SkillsSection";
 
 export default function Home() {
   return (
     <>
       <BackgroundImage />
 
-      <NavBar />
+      <HeaderWrapper />
 
-      <SmoothEffectScroll>
-        <WelcomeText />
-      </SmoothEffectScroll>
-
-      <SmoothEffectScroll>
-        <HeaderContent />
-      </SmoothEffectScroll>
+      <SkillsSection />
 
       <div className="h-[900px]"></div>
     </>
