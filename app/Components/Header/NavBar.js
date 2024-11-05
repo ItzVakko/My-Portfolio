@@ -27,14 +27,17 @@ const NavBar = () => {
 
   return (
     <motion.div
-      className="w-full h-20 bg-customGray px-[120px] fixed top-0 left-0 z-50 border-b border-white border-solid"
+      className="w-full h-24 bg-customGray px-[140px] fixed top-0 left-0 z-50 border-b border-white border-solid"
       initial={{ y: -100 }}
       animate={{ y: isVisible ? 0 : -100 }}
       transition={{ type: "spring", stiffness: 40 }}
     >
       <div className="w-full h-full flex justify-between items-center">
-        <div className="max-w-[330px]">
-          <ul className="text-white flex gap-10 font-teko text-xl nav-links">
+        <div className="max-w-[380px]">
+          <ul
+            id="nav-links"
+            className="text-white flex gap-10 font-teko text-2xl"
+          >
             <li>
               <a href="#">About Me</a>
             </li>
@@ -50,7 +53,7 @@ const NavBar = () => {
           </ul>
         </div>
 
-        <div className="w-28 h-28 transform -translate-y-10">
+        <div className="w-28 h-28 transform -translate-y-12">
           <motion.div
             animate={{ rotate: rotateAngle }}
             transition={{ type: "tween", duration: 0.5 }}
@@ -64,8 +67,11 @@ const NavBar = () => {
           </motion.div>
         </div>
 
-        <div className="max-w-[330px]">
-          <ul className="text-white flex gap-10 font-teko text-xl nav-links">
+        <div className="max-w-[380px]">
+          <ul
+            id="nav-links"
+            className="text-white flex gap-10 font-teko text-2xl"
+          >
             <li>
               <a>Facebook</a>
             </li>

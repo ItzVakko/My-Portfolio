@@ -37,7 +37,7 @@ const HeaderCodeBoxes = () => {
         </ol>
       </div>
       {/* CSS Code imitation part */}
-      <div className="bg-[#2E2E2E] absolute top-60 translate-x-[275px] border-2 border-lightGray px-2 py-1">
+      <div className="bg-[#2E2E2E] absolute top-60 translate-x-[295px] border-2 border-lightGray px-2 py-1">
         <ol className="list-none">
           <li className="text-gray-400">
             1 <span className="text-cssOrange">.my-info &#123;</span>
@@ -78,7 +78,7 @@ const HeaderCodeBoxes = () => {
         </ol>
       </div>
       {/* Javascript Code imitation part */}
-      <div className="bg-[#2E2E2E] absolute top-[400px] translate-x-[-105px] border-2 border-lightGray px-2 py-1">
+      <div className="bg-[#2E2E2E] absolute top-[440px] translate-x-[-105px] border-2 border-lightGray px-2 py-1">
         <ol className="list-none">
           <li className="text-gray-400">
             1{" "}

@@ -56,6 +56,11 @@ const SkillLogo = ({ logoSrc, alt, rotation, zIndexFront }) => {
       }`}
       style={{ transform: `rotate(${rotation}deg) translate(8rem)` }}
       animate={{ zIndex: [10, 30, 10] }}
+      transition={{
+        duration: 10,
+        repeat: Infinity,
+        ease: "linear",
+      }}
     >
       <Image src={logoSrc} alt={alt} className="w-full h-full" />
     </motion.div>
