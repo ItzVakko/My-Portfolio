@@ -4,7 +4,7 @@ import HeaderCodeBoxes from "./HeaderCodeBoxes";
 
 const HeaderContent = () => {
   return (
-    <div className="relative flex justify-between mt-[36rem] px-44">
+    <div className="relative flex justify-between mt-[34rem] px-44">
       <div className="mt-28">
         <h1 className="text-white text-6xl font-fredoka">
           LET'S EXPLORE <span className="neon-text">MYSELF</span>

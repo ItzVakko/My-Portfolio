@@ -21,7 +21,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${Fredoka.variable} ${Teko.variable}`}>{children}</body>
+      <body
+        suppressHydrationWarning={true}
+        className={`${Fredoka.variable} ${Teko.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
