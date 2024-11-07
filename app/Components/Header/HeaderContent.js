@@ -6,13 +6,13 @@ const HeaderContent = () => {
   return (
     <div className="relative flex justify-between mt-[34rem] px-44">
       <div className="mt-28">
-        <h1 className="text-white text-6xl font-fredoka">
+        <h1 className="text-darkWhite text-6xl font-fredoka">
           LET'S EXPLORE <span className="neon-text">MYSELF</span>
         </h1>
 
         <div className="w-40 h-1 bg-blue-300 rounded-sm"></div>
 
-        <h1 className="text-white text-6xl mt-4 font-fredoka">TOGETHER!</h1>
+        <h1 className="text-darkWhite text-6xl mt-4 font-fredoka">TOGETHER!</h1>
 
         <p className="text-gray-300 mt-6 text-xl">
           I am a passionate coder on a quest to master the impossible. Let's
@@ -20,7 +20,7 @@ const HeaderContent = () => {
           dreams become reality.
         </p>
 
-        <button className="text-white text-xl font-semibold px-8 py-4 mt-6 rounded-md bg-gradient-to-r from-blue-500 to-teal-400 border border-white shadow-lg hover:shadow-xl hover:bg-gradient-to-l hover:from-teal-400 hover:to-blue-500 transition duration-300 ease-in-out transform hover:scale-105 hover:text-black">
+        <button className="text-darkWhite text-xl font-semibold px-8 py-4 mt-6 rounded-md bg-gradient-to-r from-blue-500 to-teal-400 border border-white shadow-lg hover:shadow-xl hover:bg-gradient-to-l hover:from-teal-400 hover:to-blue-500 transition duration-300 ease-in-out transform hover:scale-105 hover:text-black">
           SOCIAL NETWORKS
         </button>
       </div>

@@ -27,7 +27,7 @@ const NavBar = () => {
 
   return (
     <motion.div
-      className="w-full h-24 bg-customGray px-[140px] fixed top-0 left-0 z-50 border-b border-white border-solid"
+      className="w-full h-24 bg-customGray px-[140px] fixed top-0 left-0 z-50 border-b border-darkWhite border-solid"
       initial={{ y: -100 }}
       animate={{ y: isVisible ? 0 : -100 }}
       transition={{ type: "spring", stiffness: 40 }}
@@ -36,7 +36,7 @@ const NavBar = () => {
         <div className="max-w-[380px]">
           <ul
             id="nav-links"
-            className="text-white flex gap-10 font-teko text-2xl"
+            className="text-darkWhite flex gap-10 font-teko text-2xl"
           >
             <li>
               <a href="#">About Me</a>
@@ -70,7 +70,7 @@ const NavBar = () => {
         <div className="max-w-[380px]">
           <ul
             id="nav-links"
-            className="text-white flex gap-10 font-teko text-2xl"
+            className="text-darkWhite flex gap-10 font-teko text-2xl"
           >
             <li>
               <a>Facebook</a>

@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -30,10 +18,12 @@
   transition: background-color 0.2s ease-in-out;
 }
 
+/* Text style section */
 .neon-text {
   text-shadow: 0 0 5px #38b2ac, 0 0 10px #38b2ac, 0 0 20px #38b2ac;
 }
 
+/* Fonts style section */
 .font-fredoka {
   font-family: var(--font-fredoka), sans-serif;
 }
@@ -42,6 +32,12 @@
   font-family: var(--font-teko), sans-serif;
 }
 
+/* Hover effects style section */
+.custom-svg-hover:hover svg {
+  fill: rgb(255, 245, 230);
+}
+
+/* Animation style section */
 @keyframes upDown {
   0%,
   100% {
@@ -56,6 +52,26 @@
   animation: upDown 3s ease-in-out infinite;
 }
 
+/* Keyframe for continuous rotation */
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#circle-container {
+  animation: rotateAnimation 15s linear infinite;
+  transition: transform 0.5s ease;
+}
+
+#circle-container.paused {
+  animation-play-state: paused;
+}
+
+/* Id element style section */
 #nav-links a {
   position: relative;
 }
@@ -67,7 +83,7 @@
   left: 0;
   bottom: 0;
   width: 0;
-  background-color: white;
+  background-color: rgb(207, 203, 203);
   box-shadow: 0 0 5px #38b2ac, 0 0 10px #38b2ac, 0 0 20px #38b2ac;
   transition: width 0.3s ease-in-out;
   border-radius: 2px;

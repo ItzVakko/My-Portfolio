@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         customGray: "rgba(21, 21, 21, 0.7)",
         customWhite: "rgba(255, 255, 255, 0.2)",
+        darkWhite: "rgb(255, 245, 230)",
         lightGray: "#4A4A4A",
         cssOrange: "#FFD54F",
         cssPurple: "#A57BC4",

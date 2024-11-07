@@ -19,7 +19,7 @@ const WelcomeText = () => {
 
   return (
     <div className="mx-auto max-w-[1000px] mt-56">
-      <div className="text-white text-6xl text-center font-fredoka">
+      <div className="text-darkWhite text-6xl text-center font-fredoka">
         <AnimatedText
           text="HELLO, I'M VAKO KOBULASHVILI"
           onComplete={() => setIsFirstTextFinished(true)}
@@ -27,13 +27,13 @@ const WelcomeText = () => {
       </div>
 
       {isFirstTextFinished && (
-        <div className="text-white text-6xl neon-text text-center mt-6">
+        <div className="text-darkWhite text-6xl neon-text text-center mt-6">
           <AnimatedText text="Full-Stack Web Developer" />
         </div>
       )}
 
       <p
-        className={`text-white transition-opacity duration-1000 ease-in-out text-center mt-6 text-2xl ${
+        className={`text-darkWhite transition-opacity duration-1000 ease-in-out text-center mt-6 text-2xl ${
           showText ? "opacity-100" : "opacity-0"
         }`}
       >
