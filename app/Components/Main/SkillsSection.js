@@ -7,6 +7,8 @@ import SkillsCircle from "./SkillsCircle";
 
 const SkillsSection = () => {
   const [isBgFinished, setIsBgFinished] = useState(false);
+  const [skillsCategory, setSkillsCategory] = useState("frontend");
+
   const scrollYHook = UseScrollPosition();
 
   // When scrollY reaches 700, background should change to black
@@ -51,18 +53,39 @@ const SkillsSection = () => {
 
       <div className="flex items-center flex-col">
         <div className="flex gap-6">
-          <button className="text-darkWhite font-teko text-3xl border border-darkWhite pb-3 pt-4 px-12 rounded-md">
+          <button
+            onClick={() => setSkillsCategory("frontend")}
+            className={`font-teko text-3xl border border-darkWhite pb-3 pt-4 px-12 rounded-md transition-bg duration-500 ${
+              skillsCategory === "frontend"
+                ? "text-black bg-darkWhite"
+                : "text-darkWhite hover:bg-darkWhite hover:opacity-50 hover:text-black"
+            }`}
+          >
             Frontend
           </button>
-          <button className="text-darkWhite font-teko text-3xl border border-darkWhite pb-3 pt-4 px-12 rounded-md">
+          <button
+            onClick={() => setSkillsCategory("backend")}
+            className={`font-teko text-3xl border border-darkWhite pb-3 pt-4 px-12 rounded-md transition-bg duration-500 ${
+              skillsCategory === "backend"
+                ? "text-black bg-darkWhite"
+                : "text-darkWhite hover:bg-darkWhite hover:opacity-50 hover:text-black"
+            }`}
+          >
             Backend
           </button>
-          <button className="text-black bg-darkWhite font-teko text-3xl border border-darkWhite pb-3 pt-4 px-12 rounded-md">
+          <button
+            onClick={() => setSkillsCategory("database")}
+            className={`font-teko text-3xl border border-darkWhite pb-3 pt-4 px-12 rounded-md transition-bg duration-500 ${
+              skillsCategory === "database"
+                ? "text-black bg-darkWhite"
+                : "text-darkWhite hover:bg-darkWhite hover:opacity-50 hover:text-black"
+            }`}
+          >
             Databases
           </button>
         </div>
 
-        <SkillsCircle />
+        <SkillsCircle skillsCategory={skillsCategory} />
       </div>
     </motion.div>
   );
