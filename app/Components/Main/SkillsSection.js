@@ -8,23 +8,38 @@ import SkillsCircle from "./SkillsCircle";
 const SkillsSection = () => {
   const [isBgFinished, setIsBgFinished] = useState(false);
   const [skillsCategory, setSkillsCategory] = useState("frontend");
+  const [heightNumber, setHeightNumber] = useState(1500);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const scrollYHook = UseScrollPosition();
 
   // When scrollY reaches 700, background should change to black
   useEffect(() => {
-    if (scrollYHook >= 700) {
+    const isScrollingDown = scrollYHook > lastScrollY;
+    setLastScrollY(scrollYHook);
+
+    if (scrollYHook >= 700 && scrollYHook <= 1400) {
       setIsBgFinished(true);
+      if (isScrollingDown) {
+        setHeightNumber(0);
+      } else {
+        setHeightNumber(-1500);
+      }
     } else {
       setIsBgFinished(false);
+      if (isScrollingDown) {
+        setHeightNumber(-1500);
+      } else {
+        setHeightNumber(1500);
+      }
     }
-  }, [scrollYHook]);
+  }, [scrollYHook, lastScrollY]);
 
   return (
     <motion.div
       className="w-full h-[100vh] bg-black fixed inset-0 z-0 px-32 flex items-center gap-48"
       initial={{ y: 1500 }}
-      animate={{ y: isBgFinished ? 0 : 1500 }}
+      animate={{ y: isBgFinished ? 0 : heightNumber }}
       transition={{
         type: "spring",
         stiffness: isBgFinished ? 40 : 80,
