@@ -1,4 +1,4 @@
-const HeaderCodeBoxes = () => {
+const AboutMeCodeBoxes = () => {
   return (
     <>
       {/* Html code imitation part */}
@@ -98,25 +98,29 @@ const HeaderCodeBoxes = () => {
           <li className="text-gray-400">
             3{" "}
             <span className="ml-8 text-blue-200">
-              alias: <span className="text-green-300">"Code Explorer"</span>,
+              alias:{" "}
+              <span className="text-green-300">&quot;Code Explorer&quot;</span>,
             </span>
           </li>
           <li className="text-gray-400">
             4{" "}
             <span className="ml-8 text-blue-200">
-              quest: <span className="text-green-300">"Master Code"</span>,
+              quest:{" "}
+              <span className="text-green-300">&quot;Master Code&quot;</span>,
             </span>
           </li>
           <li className="text-gray-400">
             5{" "}
             <span className="ml-8 text-blue-200">
-              weapon: <span className="text-green-300">"Keyboard"</span>,
+              weapon:{" "}
+              <span className="text-green-300">&quot;Keyboard&quot;</span>,
             </span>
           </li>
           <li className="text-gray-400">
             6{" "}
             <span className="ml-8 text-blue-200">
-              motto: <span className="text-green-300">"Do Impossible"</span>
+              motto:{" "}
+              <span className="text-green-300">&quot;Do Impossible&quot;</span>
             </span>
           </li>
           <li className="text-gray-400">
@@ -131,4 +135,4 @@ const HeaderCodeBoxes = () => {
   );
 };
 
-export default HeaderCodeBoxes;
+export default AboutMeCodeBoxes;

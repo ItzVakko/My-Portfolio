@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./components/Header/Header";
 
 const Fredoka = localFont({
   src: "./Assets/Fonts/Fredoka-Font.woff",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning={true}
         className={`${Fredoka.variable} ${Teko.variable}`}
       >
+        <Header />
         {children}
       </body>
     </html>

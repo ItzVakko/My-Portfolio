@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import UseScrollPosition from "../CustomHooks/UseScrollPosition";
+import UseScrollPosition from "../../../../hooks/UseScrollPosition";
 import SkillsCircle from "./SkillsCircle";
 
-const SkillsSection = () => {
+const Skills = () => {
   const [isBgFinished, setIsBgFinished] = useState(false);
   const [skillsCategory, setSkillsCategory] = useState("frontend");
 
@@ -22,7 +22,7 @@ const SkillsSection = () => {
 
   return (
     <motion.div
-      className="w-full h-[100vh] bg-black fixed inset-0 z-0 px-32 flex items-center gap-48"
+      className="w-full h-[100vh] bg-black fixed inset-0 z-0 px-44 flex items-center justify-between gap-48"
       initial={{ y: 1500 }}
       animate={{ y: isBgFinished ? 0 : 1500 }}
       transition={{
@@ -91,4 +91,4 @@ const SkillsSection = () => {
   );
 };
 
-export default SkillsSection;
+export default Skills;

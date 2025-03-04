@@ -1,8 +1,7 @@
-// components/SmoothScroll.js
 "use client";
 
 import { motion } from "framer-motion";
-import useScrollPosition from "./CustomHooks/UseScrollPosition";
+import useScrollPosition from "../hooks/UseScrollPosition";
 
 const SmoothScroll = ({ children }) => {
   const scrollY = useScrollPosition();

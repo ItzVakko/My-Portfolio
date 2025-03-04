@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import AnimatedText from "../AnimatedText";
+import AnimatedText from "../../../../components/AnimatedText";
 import Image from "next/image";
-import NeonArrow from "../../Assets/Images/neonArrow.png";
+import NeonArrow from "../../../../assets/Images/neonArrow.png";
 
 const WelcomeText = () => {
   const [isFirstTextFinished, setIsFirstTextFinished] = useState(false);
