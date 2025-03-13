@@ -5,7 +5,7 @@ import Skills from "./Components/Skills/Skills";
 
 const HomePage = () => {
   return (
-    <div>
+    <main className="px-44">
       <SmoothEffectScroll>
         <WelcomeText />
       </SmoothEffectScroll>
@@ -15,7 +15,7 @@ const HomePage = () => {
       </SmoothEffectScroll>
 
       <Skills />
-    </div>
+    </main>
   );
 };
 

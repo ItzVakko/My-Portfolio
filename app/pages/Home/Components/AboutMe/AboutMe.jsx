@@ -4,7 +4,7 @@ import AboutMeCodeBoxes from "./AboutMeCodeBoxes";
 
 const AboutMe = () => {
   return (
-    <div className="relative flex justify-between mt-[34rem] px-44">
+    <div className="relative flex justify-between mt-[34rem]">
       <div className="mt-28">
         <h1 className="text-darkWhite text-6xl font-fredoka">
           LET&apos;S EXPLORE <span className="neon-text">MYSELF</span>
