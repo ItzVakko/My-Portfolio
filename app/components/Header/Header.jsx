@@ -1,6 +1,5 @@
 "use client";
 
-import progressCircleImage from "../../assets/Images/settingsCircle.png";
 import UseScrollPosition from "../../hooks/UseScrollPosition";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -61,9 +60,10 @@ const Header = () => {
               className="w-full h-full origin-center"
             >
               <Image
-                src={progressCircleImage}
+                src="/Images/settingsCircle.png"
                 alt="ProgressCircle"
                 className="w-full h-full"
+                layout="fill"
               />
             </motion.div>
           </div>

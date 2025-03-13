@@ -1,5 +1,4 @@
 import Image from "next/image";
-import MyPhoto from "../../../../assets/Images/myself.png";
 import AboutMeCodeBoxes from "./AboutMeCodeBoxes";
 
 const AboutMe = () => {
@@ -27,10 +26,11 @@ const AboutMe = () => {
 
       <div className="w-[380px] px-2 pt-2 bg-customGray border border-customWhite border-solid rounded-[5px] shadow-[0_4px_10px_rgba(255,255,255,0.2)]">
         <Image
-          src={MyPhoto}
+          src="/Images/myself.png"
           alt="My Photo"
           className="w-[380px] h-auto opacity-70 contrast-125 saturate-150"
           priority
+          layout="fill"
         />
 
         {/* It shows my description as a code style */}

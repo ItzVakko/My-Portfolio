@@ -10,7 +10,7 @@
 
 /* Background container for the image */
 .background-image {
-  background-image: url("./Assets/Images/mainBackground.jpg");
+  background-image: url("/Images/mainBackground.jpg");
   background-size: cover;
   background-position: center;
   z-index: -1;

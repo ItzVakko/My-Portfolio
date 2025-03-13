@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import AnimatedText from "../../../../components/AnimatedText";
 import Image from "next/image";
-import NeonArrow from "../../../../assets/Images/neonArrow.png";
 
 const WelcomeText = () => {
   const [isFirstTextFinished, setIsFirstTextFinished] = useState(false);
@@ -44,7 +43,7 @@ const WelcomeText = () => {
         className={`mt-10 mx-auto animate-up-down transition-opacity duration-1000 ease-in-out ${
           showText ? "opacity-100" : "opacity-0"
         }`}
-        src={NeonArrow}
+        src="/Images/neonArrow.png"
         width={180}
         height={180}
         alt="arrow"
